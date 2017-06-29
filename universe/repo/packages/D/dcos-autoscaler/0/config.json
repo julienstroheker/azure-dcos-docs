@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "service": {
+            "type": "object",
+            "description": "dcos-autoscaler. \n\n This autoscaler allow you to scaler your cluster hosted in any cloud provider.",
+            "properties": {
+                "name": {
+                    "description": "The name of the service instance",
+                    "type": "string",
+                    "default": "dcos-autoscaler"
+                },
+                "provider": {
+                    "description": "Provider",
+                    "type": "string",
+                    "default": "Azure"
+                },
+                "Max Up": {
+                    "description": "Under file system address",
+                    "type": "string",
+                    "default": "/opt/mem/ramdisk/underFSStorage"
+                },
+                "Max Down": {
+                    "description": "Whether to publish Alluxio and Spark docker images",
+                    "type": "boolean",
+                    "default": false
+                }
+            },
+            "required": [
+            ]
+        }
+    }
+}
