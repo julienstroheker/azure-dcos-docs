@@ -1,0 +1,34 @@
+{
+  "id": "nvidia-job",
+  "labels": {},
+  "run": {
+    "cpus": 0.01,
+    "mem": 128,
+    "disk": 0,
+    "cmd": "`chmod +x install-nvidia-driver.sh && sudo /bin/bash ./install-nvidia-driver.sh`",
+    "env": {},
+    "placement": {
+      "constraints": [
+        {
+          "attribute": "gpu",
+          "operator": "LIKE",
+          "value": "1"
+        }
+      ]
+    },
+    "artifacts": [
+      {
+        "uri": "https://github.com/julienstroheker/azure-dcos-docs/raw/master/nvidia/install-nvidia-driver.zip",
+        "extract": true,
+        "executable": false,
+        "cache": false
+      }
+    ],
+    "maxLaunchDelay": 3600,
+    "volumes": [],
+    "restart": {
+      "policy": "NEVER"
+    }
+  },
+  "schedules": []
+}
