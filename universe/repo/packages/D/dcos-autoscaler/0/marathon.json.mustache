@@ -5,9 +5,12 @@
   "instances": 1,
   "labels": {
     "DCOS_PACKAGE_FRAMEWORK_NAME": "{{service.name}}",
+    "DCOS_SERVICE_NAME": "{{service.name}}",
     "DCOS_MIGRATION_API_VERSION": "v1",
     "DCOS_MIGRATION_API_PATH": "/v1/plan",
-    "MARATHON_SINGLE_INSTANCE_APP":"true"
+    "DCOS_SERVICE_PORT_INDEX": "0",
+    "MARATHON_SINGLE_INSTANCE_APP":"true",
+    "DCOS_SERVICE_SCHEME": "http"
   },
   "env": {
     "AS_PROVIDER_NAME": "{{service.provider-name}}",
@@ -25,10 +28,14 @@
     "AZURE_RG": "{{azureprovider.azure-resource-group}}",
     "AZURE_VMSS": "{{azureprovider.azure-vmss-name}"
   },
+  "portDefinitions": [
+      {"port": 0, "protocol": "tcp", "name": "nginx"},
+      {"port": 0, "protocol": "tcp", "name": "autoscaler"}
+  ],
   "container": {
        "type": "DOCKER",
        "docker": {
-           "image": "julienstroheker/dcos-autoscaler",
+           "image": "julienstroheker/dcos-autoscaler:{{advanced.tag}}",
            "network" : "HOST"
        }
    },
