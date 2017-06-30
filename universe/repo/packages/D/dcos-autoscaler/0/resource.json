@@ -1,22 +1,7 @@
 {
-    "assets": {
-        "uris": {
-            "bootstrap-zip": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/bootstrap.zip",
-            "jre-tar-gz": "https://downloads.mesosphere.com/java/jre-8u112-linux-x64.tar.gz",
-            "libmesos-bundle-tar-gz": "https://downloads.mesosphere.com/libmesos-bundle/libmesos-bundle-1.9-argus-1.1.x-2.tar.gz",
-            "alluxio-bootstrap": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/v1.5.0/bootstrap-dcos.sh",
-            "launcher-script": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/launcher.sh",
-            "dockerfile": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/Dockerfile",
-            "site-properties": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/alluxio-client-site.properties",
-            "dockerfile-spark": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/Dockerfile.spark",
-            "spark-core-site": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/spark-core-site.xml",
-            "scheduler-zip": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/alluxio-enterprise-scheduler.zip",
-            "executor-zip": "https://s3-us-west-1.amazonaws.com/alluxio-dcos/autodelete7d/alluxio-enterprise/20170401-161119-g498F5LL42PHGa0i/executor.zip"
-        }
-    },
     "images": {
-        "icon-small": "",
-        "icon-medium": "",
-        "icon-large": ""
+        "icon-small": "https://github.com/julienstroheker/dcos-autoscaler/raw/master/docs/universelogo/icon-service-autoscaler-small.png",
+        "icon-medium": "https://github.com/julienstroheker/dcos-autoscaler/raw/master/docs/universelogo/icon-service-autoscaler-medium.png",
+        "icon-large": "https://github.com/julienstroheker/dcos-autoscaler/raw/master/docs/universelogo/icon-service-autoscaler-large.png"
     }
 }

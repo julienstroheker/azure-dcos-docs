@@ -5,25 +5,91 @@
             "type": "object",
             "description": "dcos-autoscaler. \n\n This autoscaler allow you to scaler your cluster hosted in any cloud provider.",
             "properties": {
-                "name": {
-                    "description": "The name of the service instance",
-                    "type": "string",
-                    "default": "dcos-autoscaler"
-                },
-                "provider": {
+                "provider-name": {
                     "description": "Provider",
                     "type": "string",
                     "default": "Azure"
                 },
-                "Max Up": {
-                    "description": "Under file system address",
-                    "type": "string",
-                    "default": "/opt/mem/ramdisk/underFSStorage"
+                "scale-up-threshold": {
+                    "description": "Threshold to kick the scale Up in percentage",
+                    "type": "integer",
+                    "default": "80"
                 },
-                "Max Down": {
-                    "description": "Whether to publish Alluxio and Spark docker images",
-                    "type": "boolean",
-                    "default": false
+                "scale-down-threshold": {
+                    "description": "Threshold to kick the scale Down in percentage",
+                    "type": "integer",
+                    "default": "20"
+                },
+                "scale-max-limit": {
+                    "description": "Maximum nodes limitation to scale",
+                    "type": "integer",
+                    "default": "20"
+                },
+                "scale-min-limit": {
+                    "description": "Minimum nodes limitation to scale",
+                    "type": "integer",
+                    "default": "3"
+                }
+            },
+            "required": [
+            ]
+        },
+        "azureprovider": {
+            "type": "object",
+            "description": "Azure Provider",
+            "properties": {
+                "azure-subscription-id": {
+                    "description": "Azure Subscription ID",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-tenant-id": {
+                    "description": "Azure Tenant ID",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-client-id": {
+                    "description": "Azure Client Id",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-client-secret": {
+                    "description": "Azure Client Secret",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-location": {
+                    "description": "Azure DC Location",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-resource-group": {
+                    "description": "Azure Resource Group",
+                    "type": "string",
+                    "default": ""
+                },
+                "azure-vmss-name": {
+                    "description": "Azure VMSS Name to scale",
+                    "type": "string",
+                    "default": ""
+                }
+            },
+            "required": [
+            ]
+        },
+        "advanced": {
+            "type": "object",
+            "description": "Advanced Options",
+            "properties": {
+                "timer": {
+                    "description": "Time in seconds between successive checks",
+                    "type": "string",
+                    "default": "60"
+                },
+                "verbose": {
+                    "description": "Sets the debug noise level",
+                    "type": "integer",
+                    "default": "2"
                 }
             },
             "required": [

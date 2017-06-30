@@ -1,15 +1,18 @@
 {
     "packagingVersion": "2.0",
-    "name": "dcos-autoscaler",
+    "name": "DC/OS Autoscaler",
     "version": "0.0.1-0.0.1",
     "maintainer": "juliens@microsoft.com",
-    "description": "dcos-autoscaler. \n\n This autoscaler allow you to scaler your cluster hosted in any cloud provider.",
+    "description": "DC/OS Autoscaler. \n\n This autoscaler allow you to scaler your cluster hosted in any cloud provider.",
     "selected": true,
     "framework": true,
     "tags": [
-        "autoscaler"
+        "autoscaler",
+        "provider",
+        "Azure",
+        "Microsoft"
     ],
     "preInstallNotes": "This DC/OS Service is currently in preview. ",
-    "postInstallNotes": "DC/OS Alluxio is being installed!\n\n\tDocumentation: https://alluxio.com/docs/ \n\tIssues: info@aluxio.com",
-    "postUninstallNotes": "DC/OS Alluxio has been uninstalled."
+    "postInstallNotes": "DC/OS Autoscaler is being installed!\n\n\tDocumentation: https://github.com/julienstroheker/dcos-autoscaler \n\tIssues: https://github.com/julienstroheker/dcos-autoscaler/issues",
+    "postUninstallNotes": "DC/OS Autoscaler has been uninstalled."
 }
