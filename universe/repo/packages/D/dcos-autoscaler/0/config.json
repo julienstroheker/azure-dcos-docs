@@ -5,6 +5,11 @@
             "type": "object",
             "description": "dcos-autoscaler. \n\n This autoscaler allow you to scaler your cluster hosted in any cloud provider.",
             "properties": {
+                "name": {
+                    "description": "Name of the service in the cluster",
+                    "type": "string",
+                    "default": "autoscaler"
+                },
                 "provider-name": {
                     "description": "Provider",
                     "type": "string",
