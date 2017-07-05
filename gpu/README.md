@@ -1,4 +1,4 @@
-# Automatically enabling GPU support using acs-engine
+# Enabling GPU support for DC/OS clusters using acs-engine
 
 ## Deployment
 
