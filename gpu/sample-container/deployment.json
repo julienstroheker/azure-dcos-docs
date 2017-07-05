@@ -1,0 +1,13 @@
+{
+  "id": "/gpu-sample-container",
+  "instances": 1,
+  "container": {
+    "type": "MESOS",
+    "docker": {
+      "image": "sozercan/dcos-gpu-sample"
+    }
+  },
+  "cpus": 1,
+  "mem": 512,
+  "gpus": 1
+}
