@@ -34,7 +34,7 @@
 
 ## Verifying GPU capabilities
 
-* Once deployed, we can confirm that we have GPU provisioned using
+* Once deployed, let's make sure that GPU drivers are deployed correctly
 
 * `ssh -fNL 8000:localhost:80 azureuser@$RESOURCEGROUP.$REGION.cloudapp.azure.com`
 
