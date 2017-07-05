@@ -8,7 +8,9 @@
 
 * `git checkout dcos-gpu`
 
-* `wget https://raw.githubusercontent.com/julienstroheker/azure-dcos-docs/master/gpu/dcos-gpu-example.json -O examples/dcos-gpu-example.json`
+* `wget https://raw.githubusercontent.com/julienstroheker/azure-dcos-docs/master/gpu/dcos-gpu-example.json -O examples/dcos-gpu-example.json` 
+
+* Customize variables such as `dnsPrefix` (required), `keyData` (required), `vmSize` and `count` 
 
 * `make devenv`
 
