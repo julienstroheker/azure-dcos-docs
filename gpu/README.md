@@ -38,6 +38,8 @@
 
 * `ssh -fNL 8000:localhost:80 azureuser@$RESOURCEGROUP.$REGION.cloudapp.azure.com`
 
+* Install DC/OS CLI, if not already installed: https://dcos.io/docs/1.9/cli/install/
+
 * `dcos config set core.dcos_url http://localhost:8000`
 
 * `dcos node --json`
