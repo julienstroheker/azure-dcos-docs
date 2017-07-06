@@ -27,3 +27,17 @@ Run the following script to mount the file share to all slave nodes.
 $ bash runForNodes.sh
 
 ```
+
+## [Another option] Mount Share Directly to the running container via Service
+
+Create the service using Docker Engine, check the `Grant Runtime Privileges` flag, update the following values in the script below.
+
+`account_name`
+`account_key`
+`fileshare_name`
+
+Prepend the following to your running command before kicking off the service:
+
+```
+account_name= && account_key= && fileshare_name= && local_folder=/tmp && apt-get update && apt-get -y install cifs-utils && mount -t cifs //$account_name.file.core.windows.net/$fileshare_name $local_folder -o vers=3.0,username=$account_name,password=$account_key,dir_mode=0777,file_mode=0777 && ls $local_folder
+```
